@@ -43,8 +43,6 @@ string CommandMgr::GetCommand()
 	}
 	if (numOfEqCommands != 1)
 		resultCmd = string();
-	else
-		cout << ">>> " << resultCmd << endl;
 	return resultCmd;
 }
 
@@ -77,10 +75,11 @@ void CommandMgr::ExecuteCommand(int opcode)
 		break;
 	case 2:	//Delete task
 		// TODO: define function
-		cout << "\nDeleteTask function hasn't defined yet" << endl;
+		cout << endl << "DeleteTask function hasn't defined yet" << endl;
 		break;
 	case 3:	//Free task pool
 		TaskMgr::FreeTaskPool();
+		TaskMgr::ShowTaskList();
 		break;
 	case 4:	//Show task list
 		TaskMgr::ShowTaskList();
@@ -91,7 +90,13 @@ void CommandMgr::ExecuteCommand(int opcode)
 	case 6:	//Help
 		CommandMgr::ShowCmdList();
 		break;
-
+	case 7:	//TODO
+		/*
+		Get data from the acceselerometr.
+		Calculate vector and speed.
+		Calculate current position.
+		Add point to the map.
+		*/
 	default:
 		cout << endl << "Warning: Command doesn't recognized" << endl;
 	}
@@ -105,3 +110,18 @@ void CommandMgr::ShowCmdList()
 		cout << command << endl;
 	}
 }
+
+
+
+/*
+pointXY GetPosition()
+{
+	x = x + v*t + a*t*t/2;	//for every dimension
+	...
+	point newP = newP(x,y,z);
+	return newP;
+}
+
+
+
+*/

@@ -17,14 +17,15 @@ TODO:	Should be described command manager for work inside OS.
 */
 
 static const vector<string> commandList =
-{// OPERATION			OPCODE
-	"AddEmptyTask",		// 0
-	"AddTask",			// 1
-	"DeleteTask",		// 2
-	"FreeTaskPool",		// 3
-	"ShowTaskList",		// 4
-	"Exit",				// 5
-	"Help"				// 6
+{// OPERATION				OPCODE
+	"AddEmptyTask",			// 0
+	"AddTask",				// 1
+	"DeleteTask",			// 2
+	"FreeTaskPool",			// 3
+	"ShowTaskList",			// 4
+	"Exit",					// 5
+	"Help",					// 6
+	"AddGetPositionTask"	// 7
 };
 
 class CommandMgr
