@@ -2,10 +2,12 @@
 #include <chrono>
 #include <thread>
 #include <stack>
+#include <Magick++.h>
 
 #include "TaskMgr.h"
 #include "CommandMgr.h"
 #include "time.h"
+#include "Map.h"
 
 
 #define ENABLE 1
@@ -28,19 +30,19 @@ void AddTask()
 	}
 }
 
-int main() 
+int main(int argc, char **argv) 
 {
-	
 	thread AddTaskThread(AddTask);
-	stack<char> st;
-	
+	/*Magick::InitializeMagick("C:\\Program Files\\ImageMagick-7.0.8-Q8");
+	Map map;
+	map.Resize(100, 100);
+	map.RandomFill('A', 'Z');
+	map.Show();
+	map.Save("COOLIMG.jpeg");*/
 	while (1)
 	{
 		TaskMgr::CheckQCondition();
 		this_thread::sleep_for(1s);
-		//cout << endl << "### Round is finished" << endl;
-		//taskMgr.checkCondition
-	//	cout << CurrentTime();
 	}
 
 	return 0;

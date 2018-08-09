@@ -76,7 +76,11 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Program Files\ImageMagick-7.0.8-Q8\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>C:\Program Files\ImageMagick-7.0.8-Q8\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -84,7 +88,11 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Program Files\ImageMagick-7.0.8-Q8\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>C:\Program Files\ImageMagick-7.0.8-Q8\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -118,12 +126,16 @@
     <ClCompile Include="CommandMgr.cpp" />
     <ClCompile Include="Entry.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Map.cpp" />
+    <ClCompile Include="MapMgr.cpp" />
     <ClCompile Include="TaskEntry.cpp" />
     <ClCompile Include="TaskMgr.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CommandMgr.h" />
     <ClInclude Include="Entry.h" />
+    <ClInclude Include="Map.h" />
+    <ClInclude Include="MapMgr.h" />
     <ClInclude Include="TaskEntry.h" />
     <ClInclude Include="TaskMgr.h" />
     <ClInclude Include="time.h" />
