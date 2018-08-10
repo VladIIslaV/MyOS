@@ -6,3 +6,6 @@
 *.tlog
 *.log
 *.idb
+*.vcxproj
+*.filters
+*.enc

@@ -97,6 +97,9 @@ void CommandMgr::ExecuteCommand(int opcode)
 		Calculate current position.
 		Add point to the map.
 		*/
+	case 8:	//Get current time
+		cout << "Time: " << CurrentTime() << "s" << endl;
+		break;
 	default:
 		cout << endl << "Warning: Command doesn't recognized" << endl;
 	}

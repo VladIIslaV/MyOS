@@ -29,10 +29,7 @@ int TaskMgr::CheckQCondition()
 		//cout << "Task pool is FREE\tTIME: " << time(&curTime) << endl;
 		return -1;
 	}
-#ifdef DEBUG
-	cout << "Time to the task = " << taskPool.front().GetTimeToStart() << "\t"
-		<< "System time = " << time(&curTime) << endl;
-#endif
+
 	for (TaskEntry &task : taskPool)
 	{
 		if (task.GetTimeToStart() <= CurrentTime())

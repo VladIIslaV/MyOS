@@ -88,6 +88,24 @@ void Map::RandomFill(uint8_t min, uint8_t max)
 	cout << "Map filled by random values." << endl;
 }
 
+void Map::InitializeLog(const char* name)
+{
+	logFile.open(name);
+	logFile << __DATE__ << "\t" << __TIME__ << endl << "Distance" << endl;
+}
+
+void Map::WriteLog(int dist)
+{
+	logFile << dist << endl;
+}
+
+void Map::CloseLog()
+{
+	logFile << endl << "LOG FINISHED" << endl;
+	logFile << __DATE__ << "\t" << __TIME__ << endl;
+	logFile.close();
+}
+
 
 
 Map::~Map()

@@ -33,6 +33,8 @@ void AddTask()
 int main(int argc, char **argv) 
 {
 	thread AddTaskThread(AddTask);
+	Map map;
+	map.InitializeLog("Great_Log.txt");
 	/*Magick::InitializeMagick("C:\\Program Files\\ImageMagick-7.0.8-Q8");
 	Map map;
 	map.Resize(100, 100);
@@ -41,8 +43,9 @@ int main(int argc, char **argv)
 	map.Save("COOLIMG.jpeg");*/
 	while (1)
 	{
+
 		TaskMgr::CheckQCondition();
-		this_thread::sleep_for(1s);
+		this_thread::sleep_for(100ms);
 	}
 
 	return 0;
