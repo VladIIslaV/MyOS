@@ -34,9 +34,9 @@ int main(int argc, char **argv)
 {
 	thread AddTaskThread(AddTask);
 	Map map;
-	map.InitializeLog("Great_Log.txt");
-	/*Magick::InitializeMagick("C:\\Program Files\\ImageMagick-7.0.8-Q8");
-	Map map;
+	//map.InitializeLog("Great_Log.txt");
+	Magick::InitializeMagick(argv[0]);
+	/*Map map;
 	map.Resize(100, 100);
 	map.RandomFill('A', 'Z');
 	map.Show();

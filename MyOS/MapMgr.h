@@ -5,6 +5,10 @@
 
 #include "Map.h"
 
+#include <Magick++.h>
+
+using namespace Magick;
+
 using namespace std;
 
 
@@ -15,7 +19,7 @@ class MapMgr
 public:
 	MapMgr();
 
-	void CreateMap();
+	static void CreateMap();	// maybe will be better to remove static statement
 	void ReadMap(int mapId);
 	void SaveMapToFile();
 

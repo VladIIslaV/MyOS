@@ -11,7 +11,7 @@ using namespace std;
 class Map
 {
 	vector<vector<uint8_t>> map;
-	ofstream& logFile;
+	ofstream logFile;
 public:
 	Map();
 

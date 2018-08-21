@@ -26,7 +26,8 @@ static const vector<string> commandList =
 	"Exit",					// 5
 	"Help",					// 6
 	"AddGetPositionTask",	// 7
-	"Time"					// 8
+	"Time",					// 8
+	"CreateMap"				// 9
 };
 
 class CommandMgr

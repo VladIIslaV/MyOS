@@ -1,5 +1,5 @@
 #include "CommandMgr.h"
-
+#include "MapMgr.h"
 
 
 CommandMgr::CommandMgr()
@@ -98,7 +98,11 @@ void CommandMgr::ExecuteCommand(int opcode)
 		Add point to the map.
 		*/
 	case 8:	//Get current time
-		cout << "Time: " << CurrentTime() << "s" << endl;
+		cout << "Time: " << CurrentTime() << "s from the start of the execution." << endl;
+		break;
+	case 9:
+		MapMgr::CreateMap();
+		cout << endl;
 		break;
 	default:
 		cout << endl << "Warning: Command doesn't recognized" << endl;
