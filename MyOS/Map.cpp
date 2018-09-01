@@ -2,7 +2,8 @@
 
 
 
-Map::Map()
+Map::Map() : 
+	logFile (ofstream())
 {
 	map = vector<vector<uint8_t>>();
 	for (auto item : map)
@@ -31,17 +32,26 @@ void Map::Resize(int X, int Y)
 
 void Map::Save(const char* fileName)
 {
-	uint8_t *arr = new uint8_t[10000];
+	uint16_t *arr = new uint16_t[10000];
 	for (int i = 0; i < 10000; i++)
 	{
-		arr[i] = i % 255;
+		arr[i] = i;
 	}
-	/*
-	ofstream mapFile(fileName);
-	Geometry imageGeom = Geometry(100, 100, 10, 20);
-	Blob imageBlob = Blob(arr, 10000);
-	Image newI = Image(imageBlob, imageGeom);
-	newI.write(fileName);*/
+	//ofstream mapFile(fileName);
+	try 
+	{
+		Image img;
+		//img.write("IMAGE.PNG");
+		/*
+		Geometry imageGeom = Geometry(100, 100, 10, 20);
+		Blob imageBlob = Blob(arr, 10000);
+		Image newI = Image(imageBlob, imageGeom);
+		newI.write(fileName);*/
+	}
+	catch (exception &error_)
+	{
+		cout << "Caught exception: " << error_.what() << endl;
+	}
 	/*
 	for (auto item : map)
 	{

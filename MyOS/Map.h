@@ -4,14 +4,15 @@
 #include <iostream>
 #include <fstream>
 #include <Magick++.h>
-#include <Magick++/Image.h>
 
 using namespace std;
+
+using namespace Magick;
 
 class Map
 {
 	vector<vector<uint8_t>> map;
-	ofstream& logFile;
+	ofstream logFile;
 public:
 	Map();
 
